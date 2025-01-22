@@ -5,7 +5,7 @@ const SobreContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 60vh;
+min-height: 70vh;
 background-color: var(--yellow);
 
     div.contentSobre{
@@ -29,10 +29,10 @@ background-color: var(--yellow);
             align-items: center;
             gap: 2rem;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 50px;
             div.containerImg{
-                width: 450px;
-                height: 350px;
+                width: 400px;
+                height: 400px;
                 border-radius: 20px;
                 overflow: hidden;
                 box-shadow: 0 4px 6px rgba(31, 31, 31, 0.463);
@@ -40,6 +40,7 @@ background-color: var(--yellow);
                 img{
                     width: 100%;
                     height: 100%;
+                    object-fit: cover;
                 }
             }
             p{
