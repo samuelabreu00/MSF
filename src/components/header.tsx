@@ -53,11 +53,11 @@ export const Header = () =>{
                 <img src={Logo} alt="" />
 
                 <ul>
-                    <a href="">Home</a>
+                    <a href="#">Home</a>
                     <a href="#sobre">Quem somos</a>
                     <a href="#servicos">Nosso trabalho</a>
-                    <a href="">Clientes</a>
-                    <a href="">Contatos</a>
+                    <a href="#clientes">Clientes</a>
+                    <a href="#contato">Contatos</a>
                 </ul>
             </div>
         </HeaderContainer>
