@@ -5,8 +5,9 @@ import imgHome from '@/assets/imgHome.jpg'
 const HomeContainer = styled.div`
     background-color: var(--black);
     color: var(--white);
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
+    padding: 1rem 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
 
     div.contentHome{

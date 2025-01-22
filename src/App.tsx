@@ -1,5 +1,5 @@
 import { Header } from './components/header'
-import { Clientes } from './screens/clientes'
+import { Fornecedores } from './screens/fornecedores'
 import { Home } from './screens/home'
 import { Serviços } from './screens/serviços'
 import { Sobre } from './screens/sobre'
@@ -11,7 +11,7 @@ function App() {
      <Header/>
      <Home/>
      <Sobre/>
-     <Clientes/>
+     <Fornecedores/>
      <Serviços/>
     </>
   )

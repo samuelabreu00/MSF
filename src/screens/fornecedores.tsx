@@ -7,11 +7,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+import cliente1 from "@/assets/imgRittal.avif"
+import cliente2 from "@/assets/imgSheesi.svg"
+import cliente3 from "@/assets/imgBrum.png"
+import cliente4 from "@/assets/imgEmbrastec.avif"
+import cliente5 from "@/assets/imgSteck.png"
+import cliente6 from "@/assets/imgSchneider.png"
+import cliente7 from "@/assets/imgAbb.png"
+
 const ClientesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--yellow);
   min-height: 50vh;
 
   div.contentClientes {
@@ -23,29 +31,25 @@ const ClientesContainer = styled.div`
 `;
 
 const clientImages = [
-  "https://via.placeholder.com/300x300?text=Cliente+1",
-  "https://via.placeholder.com/300x300?text=Cliente+2",
-  "https://via.placeholder.com/300x300?text=Cliente+3",
-  "https://via.placeholder.com/300x300?text=Cliente+4",
-  "https://via.placeholder.com/300x300?text=Cliente+5",
+  cliente1, cliente2, cliente3, cliente4, cliente5, cliente6, cliente7
 ];
 
-export const Clientes = () => {
+export const Fornecedores = () => {
   return (
     <>
-      <ClientesContainer>
+      <ClientesContainer id="fornecedores">
         <div className="contentClientes">
           <Carousel opts={{ align: "start" }} className="w-full">
             <CarouselPrevious />
             <CarouselContent>
               {clientImages.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <div className="flex aspect-square items-center justify-center p-6 bg-gray-100 rounded-md">
-                      <img
+                <CarouselItem key={index} className=" lg:basis-1/5 flex justify-center items-center">
+                  <div className="p-1 w-[200px]">
+                    <div className="flex aspect-square items-center justify-center p-6 rounded-md">
+                      <img 
                         src={image}
                         alt={`Cliente ${index + 1}`}
-                        className="w-full h-full object-cover rounded-md"
+                        className=" w-[100%]   rounded-md"
                       />
                     </div>
                   </div>
