@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay"
 
 import cliente1 from "@/assets/imgRittal.avif";
 import cliente2 from "@/assets/imgSheesi.svg";
@@ -20,18 +21,21 @@ const ClientesContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: var(--yellow);
-  min-height: 50vh;
+  min-height: 60vh;
 
   div.contentClientes {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 55px;
     box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     h1.title{
       font-weight: 600;
       font-size: 37px;
-      color: var(--white);
+      color: var(--green);
     }
   }
   
@@ -52,7 +56,11 @@ export const Fornecedores = () => {
     <ClientesContainer id="fornecedores">
       <div className="contentClientes">
         <h1 className="title">Fornecedores</h1>
-        <Carousel opts={{ align: "start" }} className="w-full">
+        <Carousel opts={{ align: "start" }} className="w-full" plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}>
           <CarouselPrevious />
           <CarouselContent>
             {clientImages.map((image, index) => (
