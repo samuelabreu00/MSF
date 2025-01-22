@@ -24,7 +24,7 @@ min-height: 60vh;
         max-width: 1350px;
         margin: 0 auto;
         box-sizing: content-box;
-        padding: 0 24px;
+        padding: 24px;
         width: 100%;
 
         h1.title{
@@ -36,8 +36,11 @@ min-height: 60vh;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
             width: 100%;
             margin-top: 50px;
+
+            flex-wrap: wrap;
         }
     }
 `
