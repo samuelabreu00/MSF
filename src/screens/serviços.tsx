@@ -47,7 +47,7 @@ export const Serviços = () =>{
         <>
         <ServicosContainer id="servicos">
             <div className="contentServicos">
-                <h1 className="title">Serviços</h1>
+                <h1 className="title">Nossos Serviços</h1>
                 <div className="containerCardServicos">
                     <CardServicos 
                      texto="Projeto e execução de sistemas elétricos"  

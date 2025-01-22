@@ -55,8 +55,8 @@ export const Header = () =>{
                 <ul>
                     <a href="#">Home</a>
                     <a href="#sobre">Quem somos</a>
+                    <a href="#fornecedores">Fornecedores</a>
                     <a href="#servicos">Nosso trabalho</a>
-                    <a href="#clientes">Clientes</a>
                     <a href="#contato">Contatos</a>
                 </ul>
             </div>

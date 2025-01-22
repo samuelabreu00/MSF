@@ -24,7 +24,7 @@ const Card = styled.div`
         p {
             font-size: 27px;
             color: var(--white);
-            font-weight: 600;
+            font-weight: 700;
         }
     }
 `;
