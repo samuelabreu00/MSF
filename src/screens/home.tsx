@@ -9,6 +9,9 @@ const HomeContainer = styled.div`
     display: flex;
     padding: 1rem 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+    -webkit-box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
+-moz-box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
+box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
 
     div.contentHome{
         display: flex;

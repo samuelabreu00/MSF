@@ -5,8 +5,10 @@ const SobreContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 60vh;
-background-color: var(--yellow);
+min-height: 90vh;
+background-color: var(--white);
+border-radius: 0 0 30px 30px;
+
 
     div.contentSobre{
         display: flex;

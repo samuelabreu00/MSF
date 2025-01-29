@@ -22,7 +22,9 @@ const ClientesContainer = styled.div`
   align-items: center;
   background-color: var(--yellow);
   min-height: 60vh;
-
+  border-bottom: 5px solid var(--green);
+  border-radius: 20px 20px 0 0;
+  
   div.contentClientes {
     max-width: 1000px;
     margin: 0 auto;
@@ -35,7 +37,7 @@ const ClientesContainer = styled.div`
     h1.title{
       font-weight: 600;
       font-size: 37px;
-      color: var(--green);
+      color: var(--white);
     }
   }
   

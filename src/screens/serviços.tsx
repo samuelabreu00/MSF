@@ -6,6 +6,7 @@ import imgConsultoria from "@/assets/imgConusltoria.jpg"
 import imgTreinamento from "@/assets/imgTreinamento.jpg"
 
 const ServicosContainer = styled.div`
+border-top: 5px solid var(--yellow);
 background-color: var(--green);
 display: flex;
 justify-content: center;

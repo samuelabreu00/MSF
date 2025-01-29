@@ -47,9 +47,9 @@ export const CardServicos = ({ texto, backgroundImage }: CardServicosProps) => {
   return (
     <Card>
       <CardBackground backgroundImage={backgroundImage} />
-      <div className="texts">
-        <p>{texto}</p>
-      </div>
+        <div className="texts">
+            <p>{texto}</p>
+        </div>
     </Card>
   );
 };
