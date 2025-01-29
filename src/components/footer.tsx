@@ -1,0 +1,108 @@
+import styled from "styled-components"
+
+const FooterContainer = styled.div`
+background-color: var(--black);
+color: var(--white);
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 4rem 0;
+
+    div.contentFooter{
+        max-width: 1350px;
+        padding: 0 24px;
+        box-sizing: content-box;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid gray;
+
+        div.box{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            h1{
+                font-size: 19px;
+                font-weight: 600;
+            }
+
+            ul.social{
+                flex-direction: row;
+            }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                a{
+                    text-decoration: none;
+                    color: var(--white);
+                }
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    p.copy{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+    }
+`
+
+export const Footer = () =>{
+    const currentYear = new Date().getFullYear();
+    return(
+        <>
+        <FooterContainer id="contato">
+            <div className="contentFooter">
+                <div className="box">
+                    <h1>Solução em Quadros Elétricos</h1>
+                    <p>Oferecendo soluções de alta qualidade desde 2019</p>
+                </div>
+
+                <div className="box">
+                    <h1>Links Rápidos</h1>
+                    <ul>
+                        <a href="">Home</a>
+                        <a href="">Quem somos</a>
+                        <a href="">Fornecedores</a>
+                        <a href="">Nosso trabalho</a>
+                        <a href="">Contato</a>
+                    </ul>
+                </div>
+
+                <div className="box">
+                    <h1>Contato</h1>
+                    <ul>
+                        <li>R. Queirós Ribeiro, 221 - LOJAS 02 - 03 - Parreão, Fortaleza, CE</li>
+                        <li>contato@msfsolucoes.com.br</li>
+                        <li>(85) 98202-3640</li>
+                    </ul>
+                </div>
+
+                <div className="box">
+                    <h1>Redes Sociais</h1>
+                    <ul className="social">
+                        <li>Instagram</li>
+                        <li>WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+            <p className="copy">&copy; {currentYear} MSF Soluções em Quadros Elétricos. Todos os direitos reservados</p>
+        </FooterContainer>
+        </>
+    )
+}
