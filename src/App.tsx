@@ -1,3 +1,4 @@
+import { Footer } from './components/footer'
 import { Header } from './components/header'
 import { Fornecedores } from './screens/fornecedores'
 import { Home } from './screens/home'
@@ -13,6 +14,7 @@ function App() {
      <Sobre/>
      <Fornecedores/>
      <Serviços/>
+     <Footer/>
     </>
   )
 }
