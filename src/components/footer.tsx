@@ -13,7 +13,6 @@ padding: 4rem 0;
     div.contentFooter{
         max-width: 1350px;
         padding: 0 24px;
-        box-sizing: content-box;
         margin: 0 auto;
         display: flex;
         align-items: flex-start;
