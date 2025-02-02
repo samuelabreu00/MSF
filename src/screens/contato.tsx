@@ -83,7 +83,7 @@
   export const Contato = () =>{
     return(
         <>
-        <ContatoContainer> 
+        <ContatoContainer id="contato"> 
           <div className="contentContato">
             <h1>Entre em contato</h1>
             <div className="flex">

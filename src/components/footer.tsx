@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FooterContainer = styled.div`
 background-color: var(--black);
@@ -48,6 +50,10 @@ padding: 4rem 0;
                 }
                 li{
                     list-style: none;
+
+                    a{
+                        font-size: 25px;
+                    }
                 }
             }
         }
@@ -65,7 +71,7 @@ export const Footer = () =>{
     const currentYear = new Date().getFullYear();
     return(
         <>
-        <FooterContainer id="contato">
+        <FooterContainer >
             <div className="contentFooter">
                 <div className="box">
                     <h1>Solução em Quadros Elétricos</h1>
@@ -95,8 +101,8 @@ export const Footer = () =>{
                 <div className="box">
                     <h1>Redes Sociais</h1>
                     <ul className="social">
-                        <li>Instagram</li>
-                        <li>WhatsApp</li>
+                        <li><a href=""><FaInstagram /></a></li>
+                        <li><a href=""><FaWhatsapp /></a></li>
                     </ul>
                 </div>
             </div>
