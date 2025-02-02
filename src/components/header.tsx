@@ -7,6 +7,10 @@ background-color: var(--black);
 width: 100%;
 height: 100px;
 display: flex;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 2;
 
  div.content-header{
     max-width: 1350px;
