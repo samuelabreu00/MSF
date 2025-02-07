@@ -40,6 +40,20 @@ const ClientesContainer = styled.div`
       color: var(--white);
     }
   }
+
+  @media (max-width: 380px) {
+    .carousel-controls{
+      display: none;
+    }
+    div.contentClientes{
+      padding: 0;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
   
 `;
 
@@ -63,12 +77,16 @@ export const Fornecedores = () => {
           delay: 2000,
         }),
       ]}>
-          <CarouselPrevious />
+
+          <div className="carousel-controls">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
           <CarouselContent>
             {clientImages.map((image, index) => (
               <CarouselItem
                 key={index}
-                className="flex justify-center items-center md:basis-1/4 lg:basis-1/3 sm:basis-1/3 basis-1/2"
+                className="carousel-item flex justify-center items-center md:basis-1/4 lg:basis-1/3 sm:basis-1/3 basis-1/2"
               >
                 <div className="p-2 w-full max-w-[200px]">
                   <div className="flex aspect-square items-center justify-center rounded-md overflow-hidden">
@@ -82,7 +100,7 @@ export const Fornecedores = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselNext />
+          
         </Carousel>
       </div>
     </ClientesContainer>

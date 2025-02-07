@@ -19,7 +19,6 @@
       align-items: center;
 
       max-width: 1350px;
-      box-sizing: content-box;
       margin: 0 auto;
       padding: 24px;
       width: 100%;
@@ -69,11 +68,29 @@
               gap: 12px;
               font-size: 15px;
               font-weight: bold;
+
+              @media (max-width: 620px){
+                font-size: 12px;
+              }   
             }
           }
         }
       }
     }
+  @media (max-width: 620px){
+    div.contentContato{
+      padding: 3rem 24px;
+    }
+    div.contentContato div.flex{
+      flex-direction: column;
+      align-items: center;
+    }
+    div.contentContato div.flex form, div.contentContato div.flex div.mapa{
+      width: 100%;
+    }
+  }
+
+  
   `
 
   const Icon = styled.div`
@@ -91,7 +108,7 @@
                 <Input type="text" placeholder="Nome" />
                 <Input type="email" placeholder="Email" />
                 <Textarea placeholder="Mensagem" />
-                <Button>Enviar</Button>
+                <Button type="submit">Enviar</Button>
               </form>
 
               <div className="mapa">

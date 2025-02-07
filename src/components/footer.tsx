@@ -64,7 +64,17 @@ padding: 4rem 0;
         justify-content: center;
         align-items: center;
         padding-top: 3rem;
+        text-align: center;
     }
+
+@media (max-width: 620px){
+    div.contentFooter{
+        flex-direction: column;
+    }
+    div.contentFooter div.box{
+        width: 100%;
+    }
+}
 `
 
 export const Footer = () =>{
@@ -81,11 +91,11 @@ export const Footer = () =>{
                 <div className="box">
                     <h1>Links Rápidos</h1>
                     <ul>
-                        <a href="">Home</a>
-                        <a href="">Quem somos</a>
-                        <a href="">Fornecedores</a>
-                        <a href="">Nosso trabalho</a>
-                        <a href="">Contato</a>
+                        <a href="#">Home</a>
+                        <a href="#sobre">Quem somos</a>
+                        <a href="#fornecedores">Fornecedores</a>
+                        <a href="#servicos">Nosso trabalho</a>
+                        <a href="#contato">Contato</a>
                     </ul>
                 </div>
 

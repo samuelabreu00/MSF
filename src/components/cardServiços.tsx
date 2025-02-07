@@ -27,6 +27,9 @@ const Card = styled.div`
             font-weight: 700;
         }
     }
+    @media (max-width: 685px) {
+    width: 100%; 
+  }
 `;
 
 const CardBackground = styled.div<{ backgroundImage?: string }>`

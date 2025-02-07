@@ -58,6 +58,19 @@ border-radius: 0 0 30px 30px;
         }
        
     }
+
+    @media (max-width: 750px){
+        div.contentSobre div.flex{
+            flex-direction: column;
+        }
+        div.contentSobre div.flex div.containerImg{
+            width: 100%;
+            height: 90%;
+        }
+        div.contentSobre div.flex p{
+            width: 100%;
+        }
+    }
 `
 
 export const Sobre = () =>{

@@ -1,11 +1,13 @@
 import styled from "styled-components"
+import "../responsive.css"
 import Logo from "../assets/logo.png"
+import { useEffect } from "react"
 
 const HeaderContainer = styled.div`
 
 background-color: var(--black);
 width: 100%;
-height: 100px;
+height: 120px;
 display: flex;
 position: fixed;
 top: 0;
@@ -23,8 +25,24 @@ z-index: 2;
     justify-content: space-between;
     align-items: center;
 
+    .container-hamburguer{
+        display: none;
+        }
+        .hamburguer{
+            cursor: pointer;
+        }
+        .bar{
+            display: block;
+            width: 1.8rem;
+            height: 3px;
+            margin: 5px auto;
+            transition: .3s ease-in-out;
+            background-color: #fff;
+            border-radius: 6px;
+        }
+
     img{
-        width: 200px;
+        width: 250px;
     }
 
     ul{
@@ -32,6 +50,10 @@ z-index: 2;
         justify-content: center;
         align-items: center;
         gap: 32px;
+
+        li{
+            list-style: none;
+        }
         
         a{
             color: var(--white);
@@ -46,23 +68,79 @@ z-index: 2;
     }
 
 }
-
 `
 
 export const Header = () =>{
+
+    
+  useEffect(() => {
+    const hamburguer = document.querySelector(".hamburguer") as HTMLElement | null;
+    const navMenu = document.querySelector(".content-header .nav-menu") as HTMLElement | null;
+  
+    if (!hamburguer || !navMenu) return;
+
+    const handleHamburguerClick = () => {
+      hamburguer.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    };
+  
+    const handleDocumentClick = (e: MouseEvent) => {
+      if (
+        navMenu.classList.contains("active") &&
+        !navMenu.contains(e.target as Node) &&
+        !hamburguer.contains(e.target as Node)
+      ) {
+        navMenu.classList.remove("active");
+        hamburguer.classList.remove("active");
+      }
+    };
+  
+    const handleScroll = () => {
+      if (navMenu.classList.contains("active")) {
+        navMenu.classList.remove("active");
+        hamburguer.classList.remove("active");
+      }
+    };
+  
+    if (hamburguer) {
+      hamburguer.addEventListener("click", handleHamburguerClick);
+    }
+  
+    document.addEventListener("click", handleDocumentClick);
+    document.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      if (hamburguer) {
+        hamburguer.removeEventListener("click", handleHamburguerClick);
+      }
+      document.removeEventListener("click", handleDocumentClick);
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
     return(
         <>
         <HeaderContainer>
             <div className="content-header">
-                <img src={Logo} alt="" />
+               <a href="#"> <img src={Logo} alt="" /></a>
 
-                <ul>
-                    <a href="#">Home</a>
-                    <a href="#sobre">Quem somos</a>
-                    <a href="#fornecedores">Fornecedores</a>
-                    <a href="#servicos">Nosso trabalho</a>
-                    <a href="#contato">Contatos</a>
-                </ul>
+                <nav className="nav-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#sobre">Quem somos</a></li>
+                        <li><a href="#fornecedores">Fornecedores</a></li>
+                        <li><a href="#servicos">Nosso trabalho</a></li>
+                        <li><a href="#contato">Contatos</a></li>    
+                    </ul>
+                </nav>
+
+                <div className="container-hamburguer">
+                    <div className="hamburguer">
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                    </div>
+                </div>
             </div>
         </HeaderContainer>
         </>

@@ -8,16 +8,14 @@ const HomeContainer = styled.div`
     min-height: 100vh;
     display: flex;
     padding: 1rem 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
-    -webkit-box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
--moz-box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
-box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
 
     div.contentHome{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        
 
         max-width: 1350px;
         margin: 0 auto;
@@ -29,7 +27,6 @@ box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
             height: 600px;
             border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(174, 174, 174, 0.463);
 
             img{
                 width: 100%;
@@ -53,7 +50,24 @@ box-shadow: 0px 9px 16px 0px rgba(245,185,1,1);
             margin: .7rem 0 1rem 0;
            }
         }
+}
+
+@media (max-width: 1000px) {
+        div.contentHome{
+            flex-direction: column-reverse;
+            gap: 1rem;
+            padding: 10rem 24px;
+        }
+        div.contentHome div.containerImg{
+            height: 100%;
+            width: 100%;
+        }
     }
+@media (max-width: 660px){
+    div.contentHome div.texts h1{
+        font-size: 32px;
+    }
+}
 `
 
 const CustomButton = styled(Button)`

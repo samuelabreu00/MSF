@@ -18,6 +18,7 @@
 }
 body{
   background-color: var(--yellow);
+
 }
 html{
   scroll-behavior: smooth;

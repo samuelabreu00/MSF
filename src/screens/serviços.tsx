@@ -44,6 +44,13 @@ min-height: 60vh;
             flex-wrap: wrap;
         }
     }
+
+    @media (max-width: 985px){
+        div.contentServicos div.containerCardServicos{
+            justify-content: center;
+
+        }
+    }
 `
 
 export const Serviços = () =>{
