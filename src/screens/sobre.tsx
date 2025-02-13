@@ -80,7 +80,7 @@ export const Sobre = () =>{
                 <h1>Quem Somos</h1>
                 <div className="flex">
                     <div className="containerImg"><img src={imgSobre} alt="" /></div>
-                    <p>A <span>MSF Soluções</span> é uma empresa cearense líder em soluções de energia elétrica. <span>Especializada em montagem de quadros de baixa (BT), média (MT) e alta tensão (AT)</span>. <br /> <br /> Nossa equipe de engenheiros e técnicos altamente qualificados garante soluções eficientes, seguras e personalizadas para clientes de diversos setores.</p>
+                    <p>A <span>MSF Soluções</span> é uma empresa cearense líder em soluções de energia elétrica. <span>Especializada em montagem de quadros de baixa (BT), média (MT) e alta tensão (AT)</span>. <br /> <br /> Nossa equipe de engenheiros e técnicos altamente qualificados garante soluções eficientes, seguras e personalizadas para clientes de diversos setores. <br /> <br /> </p>
                 </div>
                 
             </div>
