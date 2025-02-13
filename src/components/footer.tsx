@@ -111,8 +111,8 @@ export const Footer = () =>{
                 <div className="box">
                     <h1>Redes Sociais</h1>
                     <ul className="social">
-                        <li><a href=""><FaInstagram /></a></li>
-                        <li><a href=""><FaWhatsapp /></a></li>
+                        <li><a href="https://www.instagram.com/msfsolucoes/" target="_blank"><FaInstagram /></a></li>
+                        <li><a href="" target="_blank"><FaWhatsapp /></a></li>
                     </ul>
                 </div>
             </div>
