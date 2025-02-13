@@ -113,12 +113,12 @@
 
               <div className="mapa">
                 <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.2237469970296!2d-38.54700372412444!3d-3.7614147433428675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c749369c0d1c99%3A0x9701f1dfa431bbe6!2sR.%20Queir%C3%B3s%20Ribeiro%2C%20221%20-%20Bom%20Futuro%2C%20Fortaleza%20-%20CE%2C%2060410-294!5e0!3m2!1spt-PT!2sbr!4v1738515720284!5m2!1spt-PT!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.0178247105428!2d-38.51850202412415!3d-3.8062253435748663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74fa577f3adc9%3A0xdf00ae4f93986aa4!2sR.%20Ad%C3%A9lia%20Feij%C3%B3%2C%20884%20-%20Mata%20Galinha%2C%20Fortaleza%20-%20CE%2C%2060867-620!5e0!3m2!1spt-PT!2sbr!4v1739449199319!5m2!1spt-PT!2sbr"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen></iframe>
                 <ul className="social">
-                  <li><Icon><IoLocationOutline /></Icon> <p>Endereço: R. Queirós Ribeiro, 221 - LOJAS 02 - 03</p></li>
+                  <li><Icon><IoLocationOutline /></Icon> <p>Endereço: R. Adélia Feijó, 884 - Mata Galinha - Galpão 02</p></li>
                   <li><Icon><BsTelephone /></Icon> <p>(85) 98202-3640</p></li>
                   <li><Icon><AiOutlineMail /></Icon> <p>contato@msfsolucoes.com.br</p></li>
                 </ul>

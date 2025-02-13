@@ -102,7 +102,7 @@ export const Footer = () =>{
                 <div className="box">
                     <h1>Contato</h1>
                     <ul>
-                        <li>R. Queirós Ribeiro, 221 - LOJAS 02 - 03 - Parreão, Fortaleza, CE</li>
+                        <li>R. Adélia Feijó, 884 - Mata Galinha - Galpão 02</li>
                         <li>contato@msfsolucoes.com.br</li>
                         <li>(85) 98202-3640</li>
                     </ul>
