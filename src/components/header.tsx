@@ -129,6 +129,7 @@ export const Header = () =>{
                         <li><a href="#">Home</a></li>
                         <li><a href="#sobre">Quem somos</a></li>
                         <li><a href="#fornecedores">Fornecedores</a></li>
+                        <li><a href="#parceiros">Parceiros</a></li>
                         <li><a href="#servicos">Nosso trabalho</a></li>
                         <li><a href="#contato">Contatos</a></li>    
                     </ul>

@@ -24,11 +24,12 @@ const FornecedoresContainer = styled.div`
   min-height: 40vh;
   border-bottom: 5px solid var(--green);
   border-radius: 20px 20px 0 0;
+  overflow: hidden;
   
   div.contentClientes {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 55px;
+    padding: 0 10px;
     box-sizing: content-box;
     display: flex;
     align-items: center;
@@ -86,14 +87,14 @@ export const Fornecedores = () => {
             {clientImages.map((image, index) => (
               <CarouselItem
                 key={index}
-                className="carousel-item flex justify-center items-center md:basis-1/4 lg:basis-1/3 sm:basis-1/3 basis-1/2"
+                className="carousel-item flex-shrink-0 flex justify-center items-center md:basis-1/5 lg:basis-1/5 sm:basis-1/3 basis-1/2"
               >
                 <div className="p-2 w-full max-w-[200px]">
                   <div className="flex aspect-square items-center justify-center rounded-md overflow-hidden">
                     <img
                       src={image}
                       alt={`Cliente ${index + 1}`}
-                      className="w-full h-[100px] object-contain"
+                      className="w-full max-w-[150px] h-[80px] object-contain"
                     />
                   </div>
                 </div>

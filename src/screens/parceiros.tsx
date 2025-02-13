@@ -28,12 +28,13 @@ const ParceirosContainer = styled.div`
   align-items: center;
   background-color: var(--white);
   min-height: 40vh;
+  overflow: hidden;
   border-bottom: 5px solid var(--green);
   
   div.contentClientes {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 55px;
+    padding: 0 10px;
     box-sizing: content-box;
     display: flex;
     align-items: center;
@@ -80,7 +81,7 @@ const clientImages = [
 
 export const Parceiros = () => {
   return (
-    <ParceirosContainer id="fornecedores">
+    <ParceirosContainer id="parceiros">
       <div className="contentClientes">
         <h1 className="title">Parceiros</h1>
         <Carousel opts={{ align: "start" }} className="w-full" plugins={[
@@ -97,14 +98,14 @@ export const Parceiros = () => {
             {clientImages.map((image, index) => (
               <CarouselItem
                 key={index}
-                className="carousel-item flex justify-center items-center md:basis-1/4 lg:basis-1/3 sm:basis-1/3 basis-1/2"
+                className="carousel-item flex-shrink-0 flex justify-center items-center md:basis-1/5 lg:basis-1/5 sm:basis-1/3 basis-1/2"
               >
                 <div className="p-2 w-full max-w-[200px]">
                   <div className="flex aspect-square items-center justify-center rounded-md overflow-hidden">
                     <img
-                      src={image}
-                      alt={`Cliente ${index + 1}`}
-                      className="w-full h-[100px] object-contain"
+                        src={image}
+                        alt={`Cliente ${index + 1}`}
+                        className="w-full max-w-[150px] h-[80px] object-contain"
                     />
                   </div>
                 </div>
