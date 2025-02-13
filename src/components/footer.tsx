@@ -84,7 +84,7 @@ export const Footer = () =>{
         <FooterContainer >
             <div className="contentFooter">
                 <div className="box">
-                    <h1>Solução em Quadros Elétricos</h1>
+                    <h1>Soluções em Quadros Elétricos</h1>
                     <p>Oferecendo soluções de alta qualidade desde 2019</p>
                 </div>
 
