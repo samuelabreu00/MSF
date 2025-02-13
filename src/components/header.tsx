@@ -122,9 +122,9 @@ export const Header = () =>{
         <>
         <HeaderContainer>
             <div className="content-header">
-               <a href="#"> <img src={Logo} alt="" /></a>
+               <a href="#" data-aos="fade-right"> <img src={Logo} alt=""/></a>
 
-                <nav className="nav-menu">
+                <nav className="nav-menu" data-aos="fade-right">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#sobre">Quem somos</a></li>

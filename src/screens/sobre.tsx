@@ -75,8 +75,9 @@ border-radius: 0 0 30px 30px;
 
 export const Sobre = () =>{
     return(
-        <SobreContainer id="sobre">
-            <div className="contentSobre">
+        <SobreContainer id="sobre" >
+            <div className="contentSobre"
+     data-aos-anchor-placement="center-center">
                 <h1>Quem Somos</h1>
                 <div className="flex">
                     <div className="containerImg"><img src={imgSobre} alt="" /></div>

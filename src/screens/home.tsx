@@ -89,13 +89,13 @@ export const Home = () =>{
         <>
         <HomeContainer>
             <div className="contentHome">
-                <div className="texts">
+                <div className="texts" data-aos="fade-right">
                     <h1>Soluções em <span>Quadros Elétricos</span></h1>
                     <p>Oferecemos soluções personalizadas e de alta qualidade para suas necessidades elétricas</p>
                     <CustomButton>Fale Conosco</CustomButton>
                 </div>
 
-                <div className="containerImg"><img src={imgHome} alt="" /></div>
+                <div className="containerImg" data-aos="fade-right"><img src={imgHome} alt="" /></div>
                 
             </div>
         </HomeContainer>
