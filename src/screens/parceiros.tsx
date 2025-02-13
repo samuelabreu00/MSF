@@ -8,22 +8,27 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
 
-import cliente1 from "@/assets/imgRittal.avif";
-import cliente2 from "@/assets/imgSheesi.svg";
-import cliente3 from "@/assets/imgBrum.png";
-import cliente4 from "@/assets/imgEmbrastec.avif";
-import cliente5 from "@/assets/imgSteck.png";
-import cliente6 from "@/assets/imgSchneider.png";
-import cliente7 from "@/assets/imgAbb.png";
+import cliente1 from "@/assets/imgAEB.png";
+import cliente2 from "@/assets/imgCialne.webp";
+import cliente3 from "@/assets/imgFip.jpeg";
+import cliente4 from "@/assets/imgHope.webp";
+import cliente5 from "@/assets/imgMaeRainha.png";
+import cliente6 from "@/assets/imgNidobox.png";
+import cliente7 from "@/assets/imgNormatelEng.webp";
+import cliente8 from "@/assets/imgNormatelIncorp.png";
+import cliente9 from "@/assets/imgPinheiro.png";
+import cliente10 from "@/assets/imgPontes.png";
+import cliente11 from "@/assets/imgTelles.webp";
+import cliente12 from "@/assets/imgUniforca.png";
+import cliente13 from "@/assets/imgVila.png";
 
-const FornecedoresContainer = styled.div`
+const ParceirosContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--yellow);
+  background-color: var(--white);
   min-height: 40vh;
   border-bottom: 5px solid var(--green);
-  border-radius: 20px 20px 0 0;
   
   div.contentClientes {
     max-width: 1000px;
@@ -37,7 +42,7 @@ const FornecedoresContainer = styled.div`
     h1.title{
       font-weight: 600;
       font-size: 37px;
-      color: var(--white);
+      color: var(--black);
     }
   }
 
@@ -65,13 +70,19 @@ const clientImages = [
   cliente5,
   cliente6,
   cliente7,
+  cliente8,
+  cliente9,
+  cliente10,
+  cliente11,
+  cliente12,
+  cliente13
 ];
 
-export const Fornecedores = () => {
+export const Parceiros = () => {
   return (
-    <FornecedoresContainer id="fornecedores">
+    <ParceirosContainer id="fornecedores">
       <div className="contentClientes">
-        <h1 className="title">Fornecedores</h1>
+        <h1 className="title">Parceiros</h1>
         <Carousel opts={{ align: "start" }} className="w-full" plugins={[
         Autoplay({
           delay: 2000,
@@ -103,6 +114,6 @@ export const Fornecedores = () => {
           
         </Carousel>
       </div>
-    </FornecedoresContainer>
+    </ParceirosContainer>
   );
 };
