@@ -1,10 +1,14 @@
   import styled from "styled-components"
+  import { useState, ChangeEvent, FormEvent } from "react";
   import { Input } from "@/components/ui/input"
   import { Textarea } from "@/components/ui/textarea"
   import { Button } from "@/components/ui/button"
   import { IoLocationOutline } from "react-icons/io5";
   import { BsTelephone } from "react-icons/bs";
   import { AiOutlineMail } from "react-icons/ai";
+  import { ToastContainer, toast } from "react-toastify";
+  import "react-toastify/dist/ReactToastify.css";
+
 
   const ContatoContainer = styled.div`
   background-color: var(--white);
@@ -89,27 +93,47 @@
       width: 100%;
     }
   }
-
-  
   `
-
   const Icon = styled.div`
   font-size: 25px;
   `
 
+interface FormData {
+  nome: string;
+  email: string;
+  mensagem: string;
+}
+
   export const Contato = () =>{
+    const [formData, setFormData] = useState<FormData>({ nome: "", email: "", mensagem: "" });
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit = (e: FormEvent) => {
+      e.preventDefault();
+      if (!formData.nome || !formData.email || !formData.mensagem) {
+        toast.error("Por favor, preencha todos os campos!");
+        return;
+      }
+      toast.success("Mensagem enviada com sucesso!");
+      setFormData({ nome: "", email: "", mensagem: "" });
+    };
+  
     return(
         <>
+        <ToastContainer />
         <ContatoContainer id="contato"> 
           <div className="contentContato">
             <h1>Entre em contato</h1>
             <div className="flex">
-              <form>
-                <Input type="text" placeholder="Nome" />
-                <Input type="email" placeholder="Email" />
-                <Textarea placeholder="Mensagem" />
-                <Button type="submit">Enviar</Button>
-              </form>
+            <form onSubmit={handleSubmit}>
+              <Input type="text" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} />
+              <Input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+              <Textarea name="mensagem" placeholder="Mensagem" value={formData.mensagem} onChange={handleChange} />
+              <Button type="submit">Enviar</Button>
+            </form>
 
               <div className="mapa">
                 <iframe 
